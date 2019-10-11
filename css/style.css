@@ -1,0 +1,136 @@
+*{
+	box-sizing: border-box;
+}
+#container{
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #50E3C2;
+	font-family: 'Open Sans', sans-serif;
+}
+#info-droite{
+	display: flex;
+	align-items: center;
+	width: 50%;
+	padding-left: 130px;
+}
+#content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 430px;
+}
+#logo{}
+#logo img{
+	width: 240px;
+	height: 134px;
+}
+
+#description{}
+#baseline{
+	color: #287161;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 16px;
+	margin-top: 16px;
+}
+#baseline a{
+	color: #287161;
+}
+
+#descript-link{
+	color: white;
+	max-width: 770px;
+	font-size: 2.5em;
+	font-weight: 700;
+	margin-bottom: 33px;
+	margin-top: 33px;
+}
+#descript-link a{
+	color: white;
+}
+
+
+#liste-gauche{
+	width: 50%;
+	background-image: url(../img/backgroundk.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@keyframes animintro{
+	0%{bottom: -50px; opacity: 0;}
+	100%{bottom: 0px; opacity: 1;}
+}
+#Gcontent{
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	transition: all 1s ease;
+	animation: animintro 1s ease;
+}
+
+.card{
+	width: 224px;
+	height: 160px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border-radius: 5px;
+	margin: 32px;
+	box-shadow: 0 0 20px rgba(000,000,000,0.1);
+}
+.card img{
+	width: 192px;
+}
+
+
+@media screen and (max-width: 640px) {
+	body{
+		margin: 0;
+	}
+	#container{
+		flex-direction: column;
+		position: initial;
+		background-image: url(../img/backgroundk.png);
+		background-size: 780px;
+    	background-position: -400px 0px;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	#info-droite{
+		width: 100%;
+		height: 100%;
+		padding: 38px;
+	}
+	#logo{
+		margin: 50px 0px 50px 0px;
+	}
+	#liste-gauche {
+		width: 100%;
+		background-image: none;
+	}
+	#Gcontent{
+		justify-content: center;
+	}
+	#content{
+		height: initial;
+	}
+	.card{
+		width: 128px;
+		height: 96px;
+		margin: 16px;
+	}
+	.card img{
+		width: 96px;
+	}
+}
